@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Roboto', sans-serif;font-size:24px;font-weight:400;line-height:36px;letter-spacing:-0.02em;line-height:32px;
+  color: #37474F;
+}
+
+.hero {
+  min-height: 480px;
+  background-color: #FF4081;
+  color: #fff;
+  background-image: url(./images/Anitta-lançará-versão-em-inglês-do-hit-Bang-MDPOP.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.grid-cont{
+  padding: 0 200px 100px 200px;
+}
