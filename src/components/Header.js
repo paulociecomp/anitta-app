@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component{
 
@@ -23,6 +24,7 @@ export default class Header extends React.Component{
           title="Anitta App"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
+          style={{ position: 'fixed', top: 0 }}
         />
 
         <Drawer
@@ -31,8 +33,9 @@ export default class Header extends React.Component{
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
-          <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-          <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+          <MenuItem containerElement={<Link to="/albuns/1" />} onClick={this.handleClose}>Anitta</MenuItem>
+          <MenuItem containerElement={<Link to="/albuns/2" />} onClick={this.handleClose}>Ritmo Perfeiro</MenuItem>
+          <MenuItem containerElement={<Link to="/albuns/3" />} onClick={this.handleClose}>Bang</MenuItem>
         </Drawer>
       </header>
     );

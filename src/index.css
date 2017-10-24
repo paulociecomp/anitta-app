@@ -9,11 +9,26 @@ body {
   min-height: 480px;
   background-color: #FF4081;
   color: #fff;
-  background-image: url(./images/Anitta-lançará-versão-em-inglês-do-hit-Bang-MDPOP.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.home-cover{
+  background-image: url(./images/Anitta-lançará-versão-em-inglês-do-hit-Bang-MDPOP.jpg);
+}
+
+.album-1{
+  background-image: url(./images/anitta_01.jpg);
+}
+
+.album-2{
+  background-image: url(./images/anitta-xeque-mate-parceria-a-gambiarra-e1506112583260-1170x480.jpg);
+}
+
+.album-3{
+  background-image: url(./images/ref_11467.1544.jpg);
 }
 
 .grid-cont{
