@@ -27,9 +27,11 @@ export default class Album extends Component{
 
     return (
       <div>
+
         <section className={`hero album-${album.id}`}></section>
 
         <main className="grid-cont">
+
           <h1 className="mdc-typography--display2">{album.name}</h1>
           <h2 className="mdc-typography--title">{album.year}</h2>
 
