@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
+import Subheader from 'material-ui/Subheader';
 import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component{
@@ -33,6 +35,9 @@ export default class Header extends React.Component{
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
+          <MenuItem containerElement={<Link to="/" />} onClick={this.handleClose}>Home</MenuItem>
+          <Divider />
+          <Subheader>Álbuns</Subheader>
           <MenuItem containerElement={<Link to="/albuns/1" />} onClick={this.handleClose}>Anitta</MenuItem>
           <MenuItem containerElement={<Link to="/albuns/2" />} onClick={this.handleClose}>Ritmo Perfeiro</MenuItem>
           <MenuItem containerElement={<Link to="/albuns/3" />} onClick={this.handleClose}>Bang</MenuItem>
