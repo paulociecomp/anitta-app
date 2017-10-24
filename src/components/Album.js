@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import AlbumsApi from '../api';
+import SpotifyPlayer from 'react-spotify-player';
+
+const size = {
+  width: '100%',
+  height: 700,
+};
+const view = 'list'; // or 'coverart'
+const theme = 'white'; // or 'white'
 
 export default class Album extends Component{
 
@@ -28,7 +36,15 @@ export default class Album extends Component{
           <div className="mdc-typography--body1">
             <p dangerouslySetInnerHTML={{__html: album.text}} />
           </div>
+
+          <SpotifyPlayer
+            uri={album.spotifyURI}
+            size={size}
+            view={view}
+            theme={theme}
+          />
         </main>
+
       </div>
     );
 
