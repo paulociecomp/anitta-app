@@ -6,7 +6,7 @@ import Divider from 'material-ui/Divider';
 import Subheader from 'material-ui/Subheader';
 import { Link } from 'react-router-dom';
 
-export default class Header extends React.Component{
+export default class Header extends Component{
 
   constructor(props){
     super(props);

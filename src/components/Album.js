@@ -11,10 +11,6 @@ const theme = 'white'; // or 'white'
 
 export default class Album extends Component{
 
-  constructor(props){
-    super(props);
-  }
-
   render(){
 
     const album = AlbumsApi.get(
