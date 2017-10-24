@@ -7,6 +7,12 @@
 
 // To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
 // This link also includes instructions on opting out of this behavior.
+const newContentEvent = new CustomEvent('newcontent',
+  { 'detail': 'Novo conteúdo disponível. Por Favor, recarregue a página. :D' });
+
+const offlineOkEvent = new CustomEvent('offlineok', {
+  'detail': 'Este site está pronto para funcionar offline. Awesome!'
+});
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -57,11 +63,13 @@ function registerValidSW(swUrl) {
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
               console.log('New content is available; please refresh.');
+              document.dispatchEvent(newContentEvent);
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
+              document.dispatchEvent(offlineOkEvent);
             }
           }
         };
