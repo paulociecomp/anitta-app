@@ -35,7 +35,7 @@ export default class Header extends Component{
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
-          <img src={require("../images/logo.jpg")} width="100%" height="170" />
+          <img src={require("../images/logo.jpg")} width="100%" height="150" />
           <MenuItem containerElement={<Link to="/" />} onClick={this.handleClose}>Home</MenuItem>
           <Divider />
           <Subheader>Álbuns</Subheader>
