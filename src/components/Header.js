@@ -26,7 +26,7 @@ export default class Header extends Component{
           title="Anitta App"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
-          style={{ position: 'fixed', top: 0 }}
+          style={{ position: 'fixed', top: 0, backgroundColor: '#AA00FF' }}
         />
 
         <Drawer
@@ -35,12 +35,17 @@ export default class Header extends Component{
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
+          <img src={require("../images/logo.jpg")} width="100%" height="170" />
           <MenuItem containerElement={<Link to="/" />} onClick={this.handleClose}>Home</MenuItem>
           <Divider />
           <Subheader>Álbuns</Subheader>
           <MenuItem containerElement={<Link to="/albuns/1" />} onClick={this.handleClose}>Anitta</MenuItem>
           <MenuItem containerElement={<Link to="/albuns/2" />} onClick={this.handleClose}>Ritmo Perfeiro</MenuItem>
           <MenuItem containerElement={<Link to="/albuns/3" />} onClick={this.handleClose}>Bang</MenuItem>
+
+          <Divider />
+          <Subheader>Mídia</Subheader>
+          <MenuItem containerElement={<Link to="/video-clips" />} onClick={this.handleClose}>Vídeo Clips</MenuItem>
         </Drawer>
       </header>
     );

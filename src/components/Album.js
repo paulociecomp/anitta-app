@@ -24,16 +24,22 @@ export default class Album extends Component{
     return (
       <div>
 
-        <section className={`hero album-${album.id}`}></section>
+        <section className={`hero album-${album.id}`}>
+          <h1 className="mdc-typography--display3 animated fadeInLeft">
+            Discografia
+          </h1>
+        </section>
 
         <main className="grid-cont">
 
-          <h1 className="mdc-typography--display2">{album.name}</h1>
-          <h2 className="mdc-typography--title">{album.year}</h2>
+          <h2 className="mdc-typography--display1 animated fadeInUp">{album.name}</h2>
+          <h3 className="mdc-typography--title animated fadeInUp">{album.year}</h3>
 
-          <div className="mdc-typography--body1">
+          <div className="mdc-typography--body1 animated fadeInUp">
             <p dangerouslySetInnerHTML={{__html: album.text}} />
           </div>
+
+          <h2 className="mdc-typography--title">Músicas</h2>
 
           <SpotifyPlayer
             uri={album.spotifyURI}

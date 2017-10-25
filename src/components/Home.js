@@ -5,10 +5,10 @@ const Home = () => (
     <section className="hero home-cover"></section>
 
     <main className="grid-cont">
-      <h1 className="mdc-typography--display2">Anitta</h1>
-      <h2 className="mdc-typography--title">Biografia</h2>
+      <h1 className="mdc-typography--display2 animated fadeInLeft">Anitta</h1>
+      <h2 className="mdc-typography--title animated fadeInUp">Biografia</h2>
 
-      <div className="mdc-typography--body1">
+      <div className="mdc-typography--body1 animated fadeInUp">
         <p>
           Brazilian singer Anitta went from unknown to singing at the Olympic Games, becoming Brazil's answer to the likes of Rihanna, Beyoncé, or Katy Perry and one of the country's biggest stars. Born Larissa de Macedo Machado on March 30, 1993 and brought up in the impoverished neighborhood of Honório Gurgel in Rio de Janeiro, she began singing in church as a child and learned to dance before getting into baile funk as a teenager. She took her stage name from the central character in the TV miniseries Presença de Anita (Anita's Presence), based on the 1948 proto-Lolita novel by Mário Donato. When she was 17, one of her YouTube videos was discovered by funk Svengali and super-producer DJ Batutinha, who invited her to audition for him and subsequently signed her to his label, releasing her first single, "Eu Vou Ficar" (I'll Stay). In 2012, she was bought out of her contract by entrepreneur Kamilla Fialho, who became her manager (the two would later go on to become embroiled in a long-running multi-million-dollar legal dispute). On the strength of her single "Meiga e Abusada" (Sweet and Abused), Anitta was signed by Warner Music, who released her eponymous debut album in 2013.
         </p>
