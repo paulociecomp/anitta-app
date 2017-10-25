@@ -4,11 +4,6 @@ import ClipsApi from '../clips_api';
 
 export default class Clip extends Component{
 
-  _onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  }
-
   render(){
 
     const opts = {
@@ -31,7 +26,6 @@ export default class Clip extends Component{
         <YouTube
           videoId={video.id}
           opts={opts}
-          onReady={this._onReady}
         />
       </main>
     );
