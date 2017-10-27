@@ -114,3 +114,8 @@ body {
   animation-duration: .5s;
   animation-fill-mode: both;
 }
+
+a.news-link {
+  color: inherit;
+  text-decoration: none;
+}
