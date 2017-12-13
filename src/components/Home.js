@@ -19,6 +19,7 @@ export default class Home extends Component{
     })
     .then((response) => {
       response.json().then(function(data) {
+        data.shift();
         _this.setState({ news: data });
       });
     })
@@ -26,7 +27,6 @@ export default class Home extends Component{
   }
 
   render(){
-
     const news = this.state.news.map((item) =>
       <a className="news-link" href={item.shortLink}>
         <div className="demo-grid mdc-layout-grid" key={item.pubDate}>
@@ -37,10 +37,7 @@ export default class Home extends Component{
               </div>
               <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
                 <h3 className="mdc-typography--headline mdc-typography--adjust-margin">{item.title}</h3>
-                <p>{item.description}</p>
-
                 <p>{item.publisher}</p>
-                <p>{item.pubDate}</p>
               </div>
             </div>
           </div>
