@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Snackbar from 'material-ui/Snackbar';
 
 export default class Home extends Component{
 
@@ -6,21 +7,23 @@ export default class Home extends Component{
     super(props);
 
     this.state = {
-      news: []
+      news: [],
+      open: false,
+      message: 'carregando conteúdo...'
     }
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
 
-    const _this = this;
+    this.setState({ open: true })
 
     fetch('https://fierce-journey-63372.herokuapp.com/news', {
       method: 'GET',
     })
     .then((response) => {
-      response.json().then(function(data) {
+      response.json().then((data) => {
         data.shift();
-        _this.setState({ news: data });
+        this.setState({ news: data, open: false });
       });
     })
 
@@ -53,11 +56,14 @@ export default class Home extends Component{
         <section className="hero home-cover"></section>
 
         <main className="grid-cont">
-        <h2 className="mdc-typography--display1 animated fadeInUp">Últimas Notícias</h2>
-
-        {news}
-
+          <h2 className="mdc-typography--display1 animated fadeInUp">Últimas Notícias</h2>
+          {news}
         </main>
+
+        <Snackbar
+          open={this.state.open}
+          message={this.state.message}
+        />
       </div>
 
     )
