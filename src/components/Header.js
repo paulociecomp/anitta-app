@@ -23,7 +23,7 @@ export default class Header extends Component{
     return (
       <header className="App-header">
         <AppBar
-          title="Anitta App"
+          title="Anitta PWA"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this.handleToggle}
           style={{ position: 'fixed', top: 0, backgroundColor: '#AA00FF' }}
