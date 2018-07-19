@@ -6,10 +6,15 @@
       "src": "icon.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "anitta-bang.png",
+      "sizes": "377X479",
+      "type": "image/png"
     }
   ],
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#AE1DF5",
-  "background_color": "#AE1DF5"
+  "background_color": "#fff"
 }
